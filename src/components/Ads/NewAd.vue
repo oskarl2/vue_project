@@ -31,7 +31,7 @@
         </v-layout>
         <v-layout row>
           <v-flex xs12>
-            <img height="100" src="https://cdn.vuetifyjs.com/images/carousel/bird.jpg" alt="" />
+            <!--<img height="100" src="https://cdn.vuetifyjs.com/images/carousel/bird.jpg" alt="" />-->
           </v-flex>
         </v-layout>
         <v-layout row>
@@ -71,9 +71,10 @@
             title: this.title,
             description: this.description,
             promo: this.promo,
+            src: 'https://jordanrobins.com.au/wp-content/uploads/2017/12/46A7418-Recovered-Recovered.jpg'
           };
 
-          console.log(ad);
+          this.$store.dispatch('createAd', ad)
         }
       }
     }
